@@ -1,5 +1,6 @@
 import { HandlerContext, PageProps } from "$fresh/server.ts";
-import { buildRequest } from "./_shopify.ts";
+import { Head } from "https://deno.land/x/fresh@1.1.2/runtime.ts";
+import { buildRequest } from "../helpers/shopify.ts";
 
 export const handler = async (req: Request, ctx: HandlerContext): Promise<Response> => {
   const query = `
@@ -22,8 +23,15 @@ export const handler = async (req: Request, ctx: HandlerContext): Promise<Respon
   return ctx.render({ product: body.data.productByHandle });
 };
 
-export default function Greet(props: PageProps) {
+export default function Product(props: PageProps) {
   const { product } = props.data;
 
-  return <div>Hello {product.title}</div>;
+  return (
+    <>
+      <Head>
+        <link rel="stylesheet" href="/styles/product.css" />
+      </Head>
+      <div>Hello {product.title}</div>
+    </>
+  );
 }

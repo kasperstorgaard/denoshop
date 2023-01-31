@@ -1,0 +1,49 @@
+.app-nav {
+  position: fixed;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: clamp(320px, 80vw, 100vw);
+  padding: var(--size-4) var(--app-gutter);
+
+  background: var(--surface-3);
+  transition: transform .5s var(--ease-3);
+  color: var(--text-2);
+}
+
+.app-nav ul {
+  display: grid;
+  list-style-type: none;
+  gap: 12px;
+}
+
+.app-nav ul,
+.app-nav li {
+  padding: 0;
+}
+
+.app-nav li {
+  display: flex;
+}
+
+.app-nav a {
+  padding-left: var(--size-1);
+  padding-right: var(--size-1);
+  margin: 0;
+
+  color: inherit;
+  font-weight: 300;
+  letter-spacing: 1px;
+
+  border-bottom: 1px solid black;
+
+  transition: transform .2s ease-out, border .2s linear;
+}
+
+.app-nav a:hover {
+  transform: scale(1.02);
+  transition: transform .25s ease-in, border .25s linear;
+  text-decoration: none;
+  border-color: var(--purple-7);
+}

@@ -1,7 +1,17 @@
 :root {
-  font-family: "Alegreya", system-ui, serif;
+  --font-sans: "Noto Sans", system-ui, sans-serif;
+  --font-serif: "Alegreya", system-ui, serif;
+
+  --app-gutter: var(--size-fluid-3);
+
+  --min-click-target: 44px;
+
+  --surface-2: var(--cyan-12);
+  --surface-3: var(--sand-1);
+
+  --text-2: var(--sand-11);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Noto Sans", system-ui, sans-serif;
+body {
+  background: var(--surface-3);
 }

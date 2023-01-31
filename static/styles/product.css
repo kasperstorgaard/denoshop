@@ -1,0 +1,7 @@
+main {
+  padding-inline: var(--app-gutter);
+  padding-block: var(--size-2);
+}
+
+.product-layout {
+}
